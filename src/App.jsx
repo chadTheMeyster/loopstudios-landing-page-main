@@ -148,7 +148,7 @@ function App() {
 
         {!isDesktop && isMenuOpen && (
           <div
-            className="bg-black text-white p-8 fixed top-0 w-full z-10"
+            className="bg-black text-white p-8 fixed top-0 w-full z-10 h-full"
           >
             <div className="flex justify-between w-full items-center">
               <img src="./images/logo.svg" alt="logo" className="h-6" />
