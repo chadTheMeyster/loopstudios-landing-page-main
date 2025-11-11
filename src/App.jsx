@@ -1,8 +1,10 @@
-import { useRef } from "react";
+import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 function App() {
-  const menu = useRef();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  console.log(isMenuOpen);
 
   const isDesktop = useMediaQuery({ minWidth: 768 });
 
@@ -19,7 +21,7 @@ function App() {
     },
     {
       imageSourceDesktop: "./images/desktop/image-soccer-team.jpg",
-      imageSourceMobbile: "./images/mobile/image-soccer-team.jpg",
+      imageSourceMobile: "./images/mobile/image-soccer-team.jpg",
       text: "SOCCER TEAM VR",
     },
     {
@@ -64,7 +66,7 @@ function App() {
           alt={text}
           className="group-hover:opacity-50"
         />
-        <figcaption className="absolute bottom-0 text-white font-thin p-6 text-2xl
+        <figcaption className="absolute bottom-0 text-white font-extralight p-6 text-2xl
         group-hover:text-black">
           {text}
         </figcaption>
@@ -125,7 +127,7 @@ function App() {
             ) : (
               <button
                 onClick={() => {
-                  menu.current.classList.remove("hidden");
+                  setIsMenuOpen(true);
                 }}
               >
                 <img
@@ -137,29 +139,28 @@ function App() {
             )}
           </div>
           <div
-            className="text-white mt-40 border p-6 text-5xl font-thin
+            className="text-white mt-40 border p-6 text-4xl font-extralight
           md:w-150 md:p-10 md:text-7xl md:mt-36"
           >
             IMMERSIVE EXPERIENCES THAT DELIVER
           </div>
         </div>
 
-        {!isDesktop && (
+        {!isDesktop && isMenuOpen && (
           <div
             className="bg-black text-white p-8 fixed top-0 w-96 z-10"
-            ref={menu}
           >
             <div className="flex justify-between w-full items-center">
               <img src="./images/logo.svg" alt="logo" className="h-6" />
               <button
                 onClick={() => {
-                  menu.current.classList.add("hidden");
+                  setIsMenuOpen(false);
                 }}
               >
                 <img src="./images/icon-close.svg" alt="menu" className="h-4" />
               </button>
             </div>
-            <nav className="flex flex-col mt-30 mb-30 text-2xl font-thin">
+            <nav className="flex flex-col mt-30 mb-30 text-2xl font-extralight">
               <a href="">ABOUT</a>
               <a href="" className="mt-4 ">
                 CAREERS
@@ -187,7 +188,7 @@ function App() {
         />
         <div className="md:absolute md:w-150 md:bottom-0 md:right-[13%] md:bg-white md:pl-15 md:pt-15">
           <h1
-            className="text-center text-4xl font-thin p-6
+            className="text-center text-4xl font-extralight p-6
           md:text-5xl md:text-left"
           >
             THE LEADER IN INTERACTIVE VR
@@ -207,7 +208,7 @@ function App() {
 
       <div className="md:flex md:justify-between md:mt-15 md:pl-60 md:pr-60 md:items-center">
         <h2
-          className="text-center text-4xl font-thin p-6 mt-5 mb-5
+          className="text-center text-4xl font-extralight p-6 mt-5 mb-5
         md:text-5xl"
         >
           OUR CREATIONS
