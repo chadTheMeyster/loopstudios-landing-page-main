@@ -76,7 +76,7 @@ function App() {
 
   return (
     <div
-      className="w-96 font-JosefinSans
+      className="w-full font-JosefinSans
     md:w-screen md:flex md:justify-center md:flex-col"
     >
       <div className="relative">
@@ -90,8 +90,8 @@ function App() {
           className="w-screen"
         />
         <div
-          className="absolute top-0 p-8 w-96
-        md:w-full md:p-20 md:pr-40 md:pl-40"
+          className="absolute top-0 p-8 w-full
+        md:p-20 md:pr-40 md:pl-40"
         >
           <div className="flex justify-between w-full items-center">
             <img
@@ -148,7 +148,7 @@ function App() {
 
         {!isDesktop && isMenuOpen && (
           <div
-            className="bg-black text-white p-8 fixed top-0 w-96 z-10"
+            className="bg-black text-white p-8 fixed top-0 w-full z-10"
           >
             <div className="flex justify-between w-full items-center">
               <img src="./images/logo.svg" alt="logo" className="h-6" />
