@@ -59,15 +59,18 @@ function App() {
         key={text}
         className="relative mt-6 group
       md:m-0
-      hover:bg-primaryGrey-200"
+      hover:bg-primaryGrey-200
+      active:bg-primaryGrey-200"
       >
         <img
           src={isDesktop ? imageSourceDesktop : imageSourceMobile}
           alt={text}
-          className="group-hover:opacity-50"
+          className="group-hover:opacity-50
+          group-active:opacity-50"
         />
         <figcaption className="absolute bottom-0 text-white font-extralight p-6 text-2xl
-        group-hover:text-black">
+        group-hover:text-black
+        group-active:text-black">
           {text}
         </figcaption>
       </figure>
@@ -104,23 +107,28 @@ function App() {
             {isDesktop ? (
               <nav className="md:text-white md:w-100 md:flex md:justify-between">
                 <a href="" className="relative
-                after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100">
+                after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100
+                active:after:opacity-100">
                   About
                 </a>
                 <a href="" className="relative
-                after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100">
+                after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100
+                active:after:opacity-100">
                   Careers
                 </a>
                 <a href="" className="relative
-                after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100">
+                after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100
+                active:after:opacity-100">
                   Events
                 </a>
                 <a href="" className="relative
-                after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100">
+                after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100
+                active:after:opacity-100">
                   Products
                 </a>
                 <a href="" className="relative
-                after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100">
+                after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100
+                active:after:opacity-100">
                   Supports
                 </a>
               </nav>
@@ -215,7 +223,8 @@ function App() {
         </h2>
         {isDesktop && (
           <button className="text-center text-black text-bold mt-10 border-2 border-black p-2 pr-12 pl-12 font-Alata
-          hover:text-white hover:bg-black">
+          hover:text-white hover:bg-black
+          active:text-white active:bg-black">
             SEE ALL
           </button>
         )}
@@ -228,7 +237,8 @@ function App() {
       {!isDesktop && (
         <div className="flex justify-center">
           <button className="text-center text-black text-bold mt-10 border-2 border-black p-2 pr-12 pl-12 font-Alata
-          hover:text-white hover:bg-black ">
+          hover:text-white hover:bg-black
+          active:text-white active:bg-black">
             SEE ALL
           </button>
         </div>
@@ -249,7 +259,8 @@ function App() {
             <a
             href=""
             className="mt-8 relative md:m-0
-    after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100"
+    after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100
+    active:after:opacity-100"
           >
             About
           </a>
@@ -257,6 +268,7 @@ function App() {
             href=""
             className="mt-6 relative md:m-0
           after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100
+          active:after:opacity-100
     "
           >
             Careers
@@ -264,21 +276,24 @@ function App() {
           <a
             href=""
             className="mt-6 relative md:m-0
-          after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100"
+          after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100
+          active:after:opacity-100"
           >
             Events
           </a>
           <a
             href=""
             className="mt-6 relative md:m-0
-          after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100"
+          after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100
+          active:after:opacity-100"
           >
             Products
           </a>
           <a
             href=""
             className="mt-6 relative md:m-0
-          after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100"
+          after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100
+          active:after:opacity-100"
           >
             Support
           </a>
@@ -291,28 +306,32 @@ function App() {
           <a
             href=""
             className="relative
-          after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100"
+          after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100
+          active:after:opacity-100"
           >
             <img src="./images/icon-facebook.svg" alt="facebook" />
           </a>
           <a
             href=""
             className="relative
-          after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100"
+          after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100
+          active:after:opacity-100"
           >
             <img src="./images/icon-twitter.svg" alt="X/twitter" />
           </a>
           <a
             href=""
             className="relative
-          after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100"
+          after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100
+          active:after:opacity-100"
           >
             <img src="./images/icon-pinterest.svg" alt="pinterest" />
           </a>
           <a
             href=""
             className="relative
-          after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100"
+          after:absolute after:h-0.5 after:w-6 after:bg-white after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100
+          active:after:opacity-100"
           >
             <img src="./images/icon-instagram.svg" alt="instagram" />
           </a>
